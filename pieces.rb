@@ -37,7 +37,7 @@ class Pieces
 				}
 			}
 		}
-
+		squares
 	end
 
 	def bishop point
