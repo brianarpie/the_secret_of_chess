@@ -8,19 +8,19 @@ class Chessboard
 
   def add_white_pressure point
     # access the future object of this array index
-    @chessboard[point.x][point.y].white_counters++;
+    @chessboard[point.x][point.y].white_counters += 1
   end
 
   def remove_white_pressure point
-    @chessboard[point.x][point.y].white_counters--;
+    @chessboard[point.x][point.y].white_counters -= 1
   end
 
   def add_black_pressure point
-    @chessboard[point.x][point.y].black_counters++;
+    @chessboard[point.x][point.y].black_counters += 1
   end
 
   def remove_black_pressure point
-    @chessboard[point.x][point.y].black_counters--;
+    @chessboard[point.x][point.y].black_counters -= 1
   end
 
   def is_square_occupied? point
