@@ -6,9 +6,9 @@ class Queen
     @y = y
   end
 
-  def legal_squares
+  def legal_moves
     squares = Array.new(8)
-    
+
     for x in 0..7
       for y in 0..7
         if x != @x && y != @y

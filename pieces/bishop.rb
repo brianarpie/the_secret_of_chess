@@ -6,7 +6,7 @@ class Bishop
     @y = y
   end
 
-  def bishop point
+  def legal_moves
     squares = Array.new(8)
 
     for x in 0..7
