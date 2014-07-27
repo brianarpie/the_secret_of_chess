@@ -30,5 +30,14 @@ class Chessboard
   def set_piece piece, point
     @chessboard[point.x][point.y].piece = piece
   end
-
+    
+  def print_board
+    for y in 0..7
+      for x in 0..7
+        print @chessboard[x][y]
+      end
+        puts
+    end
+  end
+    
 end
