@@ -1,23 +1,29 @@
 class King
   attr_accessor :x, :y
+  attr_reader :name
 
   def initialize x, y
+    @name = "King"
     @x = x
     @y = y
   end
 
-  def legal_squares
-    squares = Array.new(8)
+  # this works for now but is ugly
+  def legal_moves
+    squares = Array.new
 
-    for x in (0..@x) + 2
-      for y in (0..@y) + 2
-        if x != @x && y != @y
-          if x.between?(0, 7) && y.between?(0, 7)
-            squares.push([x, y])
-          end
+    x_min = @x-1 >= 0 ? @x-1 : 0
+    x_max = @x+1 <= 7 ? @x+1 : 7
+    y_min = @y-1 >= 0 ? @y-1 : 0
+    y_max = @y+1 <= 7 ? @y+1 : 7
+    for x in (x_min..x_max)
+      for y in (y_min..y_max)
+        if (@x == x && @y != y) || (@x != x && @y == y) || (@x != x && @y != y)
+          squares.push([x, y])
         end
       end
     end
+
     squares
   end
     
